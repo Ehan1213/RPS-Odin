@@ -1,0 +1,47 @@
+.header{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.title{
+    font-size: 48px;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-align: center;
+   
+}
+
+.text{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+button {
+    min-width: 100px;
+}
+
+.outputBox{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+
+}
+
+.outputcontainer{
+    margin-top: 16px;
+}
+
+.roundResults{
+    border: 4px solid black;
+    min-width: 700px;
+    min-height: 100px;
+}

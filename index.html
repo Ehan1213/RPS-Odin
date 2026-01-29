@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="rps.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="rps.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="header">Play <p>ROCK PAPER SCISSORS!</p></div>
+    <div class="header">Play <p class="title">ROCK PAPER SCISSORS!</p></div>
     <div class="container">
         <div id="rock">
             <div class="text">Pick</div>
@@ -20,6 +21,13 @@
         <div id="scissors">
             <div class="text">Pick</div>
             <button id="scissorsButton">SCISSORS</button>
+        </div>
+    </div>
+    <div class="outputBox">
+        <div class="score">X-Y</div>
+        <div class="outputcontainer">
+            <div class="text">Round Results:</div>
+            <p class="roundResults"></p>
         </div>
     </div>
 </body>
