@@ -75,10 +75,10 @@ function playRound(humanChoice){
         computerScore.textContent = `Computer: ${computerTotal}`
 
         // debugging
-        // console.log(`You lost! ${humanSelection} lost to ${computerSelection}`)
+        // console.log(`You Lost! ${humanSelection} Lost to ${computerSelection}`)
 
         const resultItem = document.createElement("li");
-        resultItem.textContent = `You lost! ${humanSelection} lost to ${computerSelection}`;
+        resultItem.textContent = `You Lost! ${humanSelection} lost to ${computerSelection}`;
         results.appendChild(resultItem);
 
     } else if (humanSelection == "paper" && computerSelection == "rock"){
@@ -100,10 +100,10 @@ function playRound(humanChoice){
         computerScore.textContent = `Computer: ${computerTotal}`
 
         // debugging
-        // console.log(`You lost! ${humanSelection} lost to ${computerSelection}`)
+        // console.log(`You Lost! ${humanSelection} Lost to ${computerSelection}`)
 
         const resultItem = document.createElement("li");
-        resultItem.textContent = `You lost! ${humanSelection} lost to ${computerSelection}`;
+        resultItem.textContent = `You Lost! ${humanSelection} lost to ${computerSelection}`;
         results.appendChild(resultItem);
         
     } else if (humanSelection == "rock" && computerSelection == "scissors"){
@@ -125,10 +125,10 @@ function playRound(humanChoice){
 
 
         // debugging
-        // console.log(`You lost! ${humanSelection} lost to ${computerSelection}`)
+        // console.log(`You Lost! ${humanSelection} Lost to ${computerSelection}`)
 
         const resultItem = document.createElement("li");
-        resultItem.textContent = `You lost! ${humanSelection} lost to ${computerSelection}`;
+        resultItem.textContent = `You Lost! ${humanSelection} lost to ${computerSelection}`;
         results.appendChild(resultItem);
 
     } else if (humanSelection == "scissors" && computerSelection == "paper"){
