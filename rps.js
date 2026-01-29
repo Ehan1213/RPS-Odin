@@ -79,9 +79,9 @@ function playRound(humanChoice, computerChoice){
 
 
 function playGame(){
-    for (let i = 0; i < 5; i++) {
-    playRound();
- }
+//     for (let i = 0; i < 5; i++) {
+//     playRound();
+//  }
     if(humanScore > computerScore){
         console.log('The human WINS! With ' + humanScore + ' points ' + "Final Score:" + humanScore + '-' + computerScore);
     } else if(computerScore > humanScore){
