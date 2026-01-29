@@ -17,58 +17,79 @@ function getComputerChoice(){
     else{
         console.log("getComputerChoice conditional logic error");
     }
-    console.log('Computer Choice is', computerChoice);
     return computerChoice;
 }
 
-// getComputerChoice() debugging
 
-function getHumanChoice(){
-    let humanChoice = prompt("Input 'rock', 'paper', or 'scissors'");
-    console.log('Human Choice is', humanChoice);
+const score = document.querySelector("score");
+const results = document.querySelector("roundResults");
+const playerScore = document.querySelector("playerScore");
+const computerScore = document.querySelector("computerScore");
+
+
+const rockButton = document.querySelector("#rockButton")
+rockButton.addEventListener("click", () => {
+    const humanChoice = "rock";
+    alert('You pushed rock');
     return humanChoice;
+});
 
-}
+const paperButton = document.querySelector("#paperButton")
+paperButton.addEventListener("click", () => {
+    const humanChoice = "paper";
+    alert('You pushed paper');
+    return humanChoice;
+});
 
-// getHumanChoice() debugging
+const scissorsButton = document.querySelector("#scissorsButton")
+scissorsButton.addEventListener("click", () => {
+    const humanChoice = "scissors";
+    alert('You pushed scissors');
+    return humanChoice;
+});
 
-let humanScore = 0;
-let computerScore = 0;
 
 
-function playRound(humanChoice, computerChoice){
-    let   humanSelection = getHumanChoice().toLowerCase();
+
+
+let playerTotal = 0;
+let computerTotal = 0;
+
+
+function playRound(humanChoice){
+    let   humanSelection = humanChoice;
     let   computerSelection = getComputerChoice();
 
     // tie logic block
     if (humanSelection == computerSelection){ 
+
         console.log("It's a tie! " + humanSelection + " and " + computerSelection + " are the same!");
     }
 
     // rock and paper logic block
     if (humanSelection == "rock" && computerSelection == "paper"){
-        computerScore += 1;
+        computerTotal += 1;
         console.log("You lose! " + computerSelection + " beats " + humanSelection);
     } else if (humanSelection == "paper" && computerSelection == "rock"){
-        humanScore += 1;
+        playerTotal += 1;
         console.log("You Win! " + humanSelection + " beats " + computerSelection);
     }
 
     // rock and scissors logic block
     if (humanSelection == "scissors" && computerSelection == "rock"){
-        computerScore += 1;
+        computerTotal += 1;
         console.log("You lose! " + computerSelection + " beats " + humanSelection);
     } else if (humanSelection == "rock" && computerSelection == "scissors"){
-        humanScore += 1;
+        playerTotal += 1;
         console.log("You Win! " + humanSelection + " beats " + computerSelection);
     }
         
     // paper and scissors logic block
     if (humanSelection == "paper" && computerSelection == "scissors"){
-        computerScore += 1;
+        computerTotal += 1;
         console.log("You lose! " + computerSelection + " beats " + humanSelection);
     } else if (humanSelection == "scissors" && computerSelection == "paper"){
-        humanScore += 1;
+        playerTotal += 1;
         console.log("You Win! " + humanSelection + " beats " + computerSelection);
     }
 }
@@ -82,12 +103,12 @@ function playGame(){
 //     for (let i = 0; i < 5; i++) {
 //     playRound();
 //  }
-    if(humanScore > computerScore){
-        console.log('The human WINS! With ' + humanScore + ' points ' + "Final Score:" + humanScore + '-' + computerScore);
-    } else if(computerScore > humanScore){
-        console.log('The computer WINS! With ' + computerScore + ' points ' + "Final Score:" + computerScore + '-' + humanScore);
-    } else if(computerScore === humanScore){
-        console.log("It's a tie! " + "Final Score:" + computerScore + '-' + humanScore);
+    if(playerTotal > computerTotal){
+        console.log('The human WINS! With ' + playerTotal + ' points ' + "Final Score:" + playerTotal + '-' + computerTotal);
+    } else if(computerTotal > playerTotal){
+        console.log('The computer WINS! With ' + computerTotal + ' points ' + "Final Score:" + computerTotal + '-' + playerTotal);
+    } else if(computerTotal === playerTotal){
+        console.log("It's a tie! " + "Final Score:" + computerTotal + '-' + playerTotal);
     } else{
         console.log("Scoring Error")
     }
